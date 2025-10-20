@@ -1,12 +1,12 @@
 # D.I.V.A - Dorking Intelligence & Vulnerability Arsenal
 
 <pre>
-=================================================
-   Dorking Intelligence & Vulnerability Arsenal
-                   (D.I.V.A) 
-            | KILLING IN THE NAME |
-              - Tool by Copykopi -
-=================================================
+                                                                        =================================================
+                                                                           Dorking Intelligence & Vulnerability Arsenal
+                                                                                             (D.I.V.A) 
+                                                                                  | KILLING IN THE NAME VERSION |
+                                                                                        - Tool by Copykopi -
+                                                                        =================================================
 </pre>
 
 ## 📜 Deskripsi
