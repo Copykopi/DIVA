@@ -35,7 +35,8 @@ Tool ini dibuat hanya untuk **tujuan pendidikan** dan **pengujian keamanan yang 
 ## 🚀 Instalasi
 
 1.  Pastikan kamu memiliki **Python 3** terinstal.
-2.    ```bash
+
+2.  ```bash
     https://github.com/Copykopi/DIVA.git
     ```
 3.  Instal library Python yang diperlukan:
