@@ -23,7 +23,7 @@ Tool ini menggunakan mesin pencari (DuckDuckGo) untuk menemukan URL yang berpote
     * **SQLi**: Menguji tiga jenis SQLi (Error-based, Boolean-based, Time-based).
     * **XSS**: Menguji payload XSS dasar untuk mencari refleksi pada parameter.
 * **Multithreading**: Melakukan pemindaian URL secara bersamaan (concurrent) menggunakan `ThreadPoolExecutor` untuk kecepatan maksimum.
-* **Generator Perintah Lanjutan**: Secara otomatis membuat daftar perintah yang siap di-copy-paste untuk analisis lebih dalam menggunakan tool populer seperti **sqlmap**, **dalfox**, dan **nuclei**.
+* **Generator Perintah Lanjutan**: Secara otomatis membuat daftar perintah yang siap di copy paste untuk analisis lebih dalam menggunakan tool populer seperti **sqlmap**, **dalfox**, dan **nuclei**.
 * **Simpan Laporan**: Menyimpan semua URL yang ditemukan, hasil pemindaian, dan perintah lanjutan ke dalam file output.
 
 ## ⚠️ Disclaimer
