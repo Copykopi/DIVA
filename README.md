@@ -3,9 +3,9 @@
 <pre>
 =================================================
    Dorking Intelligence & Vulnerability Arsenal
-                     (D.I.V.A) 
-               | KILLING IN THE NAME |
-                   - Tool by Copykopi -
+                   (D.I.V.A) 
+            | KILLING IN THE NAME |
+              - Tool by Copykopi -
 =================================================
 </pre>
 
