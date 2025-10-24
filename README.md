@@ -5,7 +5,7 @@
      Dorking Intelligence & Vulnerability Arsenal
                       (D.I.V.A) 
              | KILLING IN THE NAME VERSION |
-                  - Tool by Copykopi -
+                  - Tool by Nyx -
   =================================================
 </pre>
 
@@ -28,7 +28,7 @@ Tool ini menggunakan mesin pencari (DuckDuckGo) untuk menemukan URL yang berpote
 
 ## ⚠️ Disclaimer
 
-Tool ini dibuat hanya untuk **tujuan pendidikan** dan **pengujian keamanan yang sah** (misalnya, program bug bounty yang Anda ikuti). Penulis (`Copykopi`) tidak bertanggung jawab atas penyalahgunaan atau aktivitas ilegal apa pun yang dilakukan menggunakan tool ini.
+Tool ini dibuat hanya untuk **tujuan pendidikan** dan **pengujian keamanan yang sah** (misalnya, program bug bounty yang Anda ikuti). Penulis (`Nyx Developer`) tidak bertanggung jawab atas penyalahgunaan atau aktivitas ilegal apa pun yang dilakukan menggunakan tool ini.
 
 **Gunakan dengan risiko Anda sendiri dan selalu bertindak secara bertanggung jawab.**
 
