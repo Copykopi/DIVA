@@ -29,7 +29,7 @@ def print_banner():
       Dorking Intelligence & Vulnerability Arsenal
                    (D.I.V.A) v6.0
             | KILLING IN THE NAME VERSION|
-                 - Tool by Copykopi -
+                  - Tool by Nyx -
    ================================================={Colors.RESET}
     """)
 
