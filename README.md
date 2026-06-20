@@ -5,7 +5,7 @@
      Dorking Intelligence & Vulnerability Arsenal
                       (D.I.V.A) 
              | KILLING IN THE NAME VERSION |
-                  - Tool by Nyx -
+                  
   =================================================
 </pre>
 
@@ -37,7 +37,7 @@ Tool ini dibuat hanya untuk **tujuan pendidikan** dan **pengujian keamanan yang 
 1.  Pastikan kamu memiliki **Python 3** terinstal.
 
 2.  ```bash
-    git clone https://github.com/Copykopi/DIVA.git
+    https://github.com/Ach-Tajul/DIVA.git
     ```
 3.  Instal library Python yang diperlukan:
 
